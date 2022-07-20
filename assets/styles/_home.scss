@@ -1,0 +1,74 @@
+.homepage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+}
+
+.block1 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.whoami {
+    background-color: $primary;
+    text-align: center;
+    height: 100%;
+    padding: 1rem;
+}
+
+.whoami > .btn {
+    margin-top: 4rem;
+}
+
+.pages {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+}
+
+.middle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+}
+
+.aboutme,
+.projects,
+.skills,
+.contact {
+    text-align: center;
+}
+
+.aboutme {
+    background-color: $blue;
+}
+
+.projects {
+    background-color: $green;
+}
+
+.skills {
+    background-color: $gray;
+}
+
+.contact {
+    background-color: $cyan;
+}
+
+@media screen and (max-width: 992px) {
+    .homepage {
+        grid-template-columns: 1fr;
+    }
+
+    .pages {
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
