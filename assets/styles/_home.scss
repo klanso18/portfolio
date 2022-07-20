@@ -6,14 +6,10 @@
     min-height: 100%;
 }
 
-.block1 {
+.whoami {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
     justify-content: center;
-}
-
-.whoami {
     background-color: $primary;
     text-align: center;
     height: 100%;
@@ -21,7 +17,7 @@
 }
 
 .whoami > .btn {
-    margin-top: 4rem;
+    margin: 3rem;
 }
 
 .pages {
@@ -44,6 +40,9 @@
 .projects,
 .skills,
 .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
 }
 
@@ -61,6 +60,28 @@
 
 .contact {
     background-color: $cyan;
+}
+
+.aboutme > h2,
+.projects > h2,
+.skills > h2,
+.contact > h2 {
+    transition:transform .4s;
+}
+
+.aboutme > h2:hover,
+.projects > h2:hover,
+.skills > h2:hover,
+.contact > h2:hover {
+    cursor:pointer;
+    transform:scale(1.3);
+}
+
+.aboutme:hover,
+.projects:hover,
+.skills:hover,
+.contact:hover {
+    filter: brightness(110%);
 }
 
 @media screen and (max-width: 992px) {

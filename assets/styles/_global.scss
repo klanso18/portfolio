@@ -1,5 +1,6 @@
 body {
     height: 100%;
+    background-color: $primary;
 }
 
 h1 {
@@ -40,4 +41,8 @@ hr {
 .btn:hover,
 .btn:focus {
   background-color: $secondary;
+}
+
+a {
+    text-decoration: none;
 }

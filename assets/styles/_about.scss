@@ -1,0 +1,39 @@
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    padding: 3rem;
+}
+
+.text > p {
+    font-family: $sans-serif;
+    color: $secondary;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.picture {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .picture {
+        margin-top: 2rem;
+    }
+
+    .text > p {
+        font-size: 0.9rem;
+    }
+}
