@@ -3,28 +3,6 @@ body {
     background-color: $primary;
 }
 
-h1 {
-    font-size: 4rem;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-h1, h2 {
-    color: $secondary;
-    font-family: $monospace;
-}
-
-h3 {
-    color: $secondary;
-    font-family: $sans-serif;
-}
-
 hr {
     color: $secondary;
 }

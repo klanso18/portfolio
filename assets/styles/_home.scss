@@ -20,6 +20,24 @@
     margin: 3rem;
 }
 
+.whoami > h1 {
+    color: $secondary;
+    font-family: $monospace;
+    font-size: 4rem;
+}
+
+.whoami > h2 {
+    color: $secondary;
+    font-family: $monospace;
+    font-size: 2rem;
+}
+
+.whoami > h3 {
+    color: $secondary;
+    font-family: $sans-serif;
+    font-size: 1.5rem;
+}
+
 .pages {
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
@@ -67,6 +85,9 @@
 .skills > h2,
 .contact > h2 {
     transition:transform .4s;
+    font-size: 2rem;
+    color: $secondary;
+    font-family: $monospace;
 }
 
 .aboutme > h2:hover,

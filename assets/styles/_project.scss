@@ -1,0 +1,43 @@
+.project > h1 {
+    color: $secondary;
+    font-family: $monospace;
+    font-size: 3rem;
+}
+
+.project > p {
+    color: $secondary;
+    font-family: $sans-serif;
+    font-size: 1.8rem;
+}
+
+.container > h2 {
+    color: $secondary;
+    font-family: $sans-serif;
+    font-size: 2rem;
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    width: 5rem;
+    background: $secondary;
+    height: 5rem;
+    text-align: center;
+    border-radius: 100px;
+}
+
+.stack {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1023px) {
+    .stack {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+    }
+}
