@@ -29,12 +29,19 @@ class ProjectType extends AbstractType
                 'label' => 'Created date',
                 'widget' => 'single_text'
             ])
-            // ->add('stack', EntityType::class, [
-            //     'class' => Stack::class,
-            //     'choice_label' => 'name',
-            //     'multiple' => true,
-            //     'expanded' => true,
+            ->add('stacks', EntityType::class, [
+                'class' => Stack::class,
+                'choice_label' => 'name',
+                'multiple' => true,
+                'expanded' => true,
+                'by_reference' => false,
+            ])
+            // ->add('images', CollectionType::class, [
+            //     'label' => false,
+            //     'entry_type' => ImageProjectType::class,
             //     'by_reference' => false,
+            //     'allow_add' => true,
+            //     'allow_delete' => true,
             // ]);
         ;
     }

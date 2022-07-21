@@ -1,13 +1,15 @@
 {% extends 'admin/base.html.twig' %}
 
+{% block title %}Edit Image{% endblock %}
+
 {% block body %}
-    <section class="project_edit">
-        <h1>{{ project.name }}</h1>
+    <section class="image_edit">
+        <h1>{{ image.name }}</h1>
         <div class="form">
             {{ form_start(form) }}
             {{ form_widget(form) }}
                 <button type="submit" class="btn btn-primary my-5">Valider</button>
-                <a href="{{ path('app_admin_project_index') }}">back to list</a>
+                <a href="{{ path('app_admin_image_index') }}">back to list</a>
             {{ form_end(form) }}
         </div>
     </section>
