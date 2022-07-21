@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<div class="d-flex flex-column">
+    {% include "_navbar.html.twig" %}
+</div>
 <section class="myprojects">
             <section class="swiper mySwiper mb-5 mx-5">
                 <div class="swiper-wrapper">
@@ -20,6 +23,9 @@
                 <div class="swiper-pagination"></div>
             </section>
 </section>
+<div class="d-flex flex-column pt-5">
+    {% include "_homebtn.html.twig" %}
+</div>
 
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
