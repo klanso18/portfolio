@@ -6,7 +6,7 @@ use App\Entity\Stack;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 
-class StackFixtures extends Fixture
+class StackFixtures extends Fixture 
 {
     public const STACKS = [
         ['name' => 'HTML'],
@@ -25,8 +25,11 @@ class StackFixtures extends Fixture
         foreach (self::STACKS as $key => $stackName) {
             $stack = new Stack();
             $stack->setName($stackName['name']);
+            $this->addReference('stack_'. $key, $stack);
             $manager->persist($stack);
+
         }
         $manager->flush();
     }
+
 }

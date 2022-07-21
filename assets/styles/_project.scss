@@ -7,10 +7,10 @@
 .project > p {
     color: $secondary;
     font-family: $sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
 }
 
-.container > h2 {
+.stackh2 > h2 {
     color: $secondary;
     font-family: $sans-serif;
     font-size: 2rem;
@@ -36,8 +36,10 @@
 
 @media screen and (max-width: 1023px) {
     .stack {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        justify-items: center;
+        flex-wrap: wrap;
+    }
+
+    .stackh2 {
+        display: none;
     }
 }

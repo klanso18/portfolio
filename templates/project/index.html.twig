@@ -5,23 +5,23 @@
     {% include "_navbar.html.twig" %}
 </div>
 <section class="myprojects">
-            <section class="swiper mySwiper mb-5 mx-5">
-                <div class="swiper-wrapper">
-                    {% for project in projects %}
+    <section class="swiper mySwiper mb-5 mx-5">
+        <div class="swiper-wrapper">
+            {% for project in projects %}
+                {% for image in project.images %}
+                    {% if image.isMain %}
                         <div class="swiper-slide d-flex flex-column position-relative">
-                            <img class="img-fluid" src="https://fakeimg.pl/440x320/">
-                            {# <img class="img-fluid" src="{{ asset('build/images/' ~ project.image)}}"> #}
-                            {# <a class="stretched-link" href="/product/show">
-                                {{ product.productName }}
-                            </a> #}
+                            <img class="img-fluid" src="{{ asset('build/images/' ~ image.name)}}">
                         </div>
-                    {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
 
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </section>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </section>
 </section>
 <div class="d-flex flex-column pt-5">
     {% include "_homebtn.html.twig" %}
