@@ -1,0 +1,13 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block body %}
+    <section class="project_edit">
+        <h1>{{ project.name }}</h1>
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+                <button type="submit" class="btn btn-primary my-5">Valider</button>
+                <a href="{{ path('app_admin_project_index') }}">back to list</a>
+            {{ form_end(form) }}
+    </section>
+    
+{% endblock %}

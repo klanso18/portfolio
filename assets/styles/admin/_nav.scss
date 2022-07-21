@@ -1,0 +1,32 @@
+.main-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding : 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: $primary;
+  z-index: 1000;
+}
+
+.nav-link:hover {
+  background-color: $blue;
+  color: $primary;
+}
+
+.fs-4 {
+  color: $secondary;
+}
+
+img {
+  height: auto;
+  width: auto;
+  max-width: 130px;
+  max-height: 130px;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.sidebar {
+  color: $secondary;
+}
