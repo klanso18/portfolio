@@ -35,7 +35,7 @@ class ProjectType extends AbstractType
                 'multiple' => true,
                 'expanded' => true,
                 'by_reference' => false,
-            ])
+            ]);
             // ->add('images', CollectionType::class, [
             //     'label' => false,
             //     'entry_type' => ImageProjectType::class,
@@ -43,7 +43,6 @@ class ProjectType extends AbstractType
             //     'allow_add' => true,
             //     'allow_delete' => true,
             // ]);
-        ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void

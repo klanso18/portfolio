@@ -7,6 +7,7 @@
 .wrapper {
   display: inline-flex;
   list-style: none;
+  padding: 0;
 }
 
 .wrapper .icon {
@@ -75,21 +76,14 @@
 .wrapper .instagram:hover,
 .wrapper .instagram:hover .tooltip,
 .wrapper .instagram:hover .tooltip::before {
-  background: #E4405F;
+  background: #dd0028;
   color: #ffffff;
 }
 
 .wrapper .github:hover,
 .wrapper .github:hover .tooltip,
 .wrapper .github:hover .tooltip::before {
-  background: #333333;
-  color: #ffffff;
-}
-
-.wrapper .youtube:hover,
-.wrapper .youtube:hover .tooltip,
-.wrapper .youtube:hover .tooltip::before {
-  background: #CD201F;
+  background: #8b8b8b;
   color: #ffffff;
 }
 

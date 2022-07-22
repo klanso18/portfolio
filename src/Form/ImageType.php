@@ -23,6 +23,9 @@ class ImageType extends AbstractType
             ->add('isMain', CheckboxType::class, [
                 'label' => 'Cette image est-elle la principale',
                 'required' => false
+            ])
+            ->add('project', null, [
+                'choice_label' => 'name'
             ]);
     }
 

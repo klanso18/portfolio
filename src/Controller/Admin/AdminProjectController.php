@@ -2,13 +2,14 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Image;
 use App\Entity\Project;
 use App\Form\ProjectType;
 use App\Repository\ProjectRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 #[Route('/admin/project')]
 class AdminProjectController extends AbstractController
@@ -25,7 +26,9 @@ class AdminProjectController extends AbstractController
     public function new(Request $request, ProjectRepository $projectRepository): Response
     {
         $project = new Project();
+        $image = new Image();
         $form = $this->createForm(ProjectType::class, $project);
+        $project->addImage($image);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
