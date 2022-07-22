@@ -1,0 +1,66 @@
+#skill > .container {
+    width: 95%;
+    border-radius: 10px;
+    animation: fill 0.5s 1s linear forwards;
+    transform-origin: left;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .container > p {
+    color: $secondary;
+    font-family: $sans-serif;
+  }
+
+  .skills {
+    text-align: center;
+    color: transparent;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fill 0.5s 2s linear forwards;
+    transform-origin: left;
+  }
+  
+  @keyframes fill {
+    0% {
+      opacity: 1;
+      transform: scaleX(0);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+  
+  .html {
+    width: 90%;
+    background-color: $cyan;
+  }
+  
+  .css {
+    width: 80%;
+    background-color: $cyan;
+  }
+  
+  .js {
+    width: 45%;
+    background-color: $cyan;
+  }
+  
+  .php {
+    width: 60%;
+    background-color: $cyan;
+  }
+
+  .symfony {
+    width: 60%;
+    background-color: $cyan;
+  }
+  
+  .blog {
+    position: relative;
+    margin-top: 2rem;
+  }

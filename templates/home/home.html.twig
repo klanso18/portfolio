@@ -3,11 +3,15 @@
 {% block body %}
     <div class="homepage">
         <div class="whoami">
-            <h1>Kévin Lansot</h1>
-            <h2>Développeur web</h2>
-            <hr>
-            <h3>Bienvenue sur mon portfolio</h3>
-            <a type="button" class="button" href="{{ path('app_about') }}">Commencer la visite</a>
+            <div class="me">
+                <h1>Kévin Lansot</h1>
+                <h2>Développeur web</h2>
+                <hr>
+                <h3>Bienvenue sur mon portfolio</h3>
+            </div>
+            <div class="start">
+                <a type="button" class="button" href="{{ path('app_about') }}">Commencer la visite</a>
+            </div>
         </div>
         <div class="pages">
             <a class="aboutme" href="{{ path('app_about') }}">
@@ -17,7 +21,7 @@
                 <a class="projects" href="{{ path('project_index') }}">
                     <h2>Projets</h2>
                 </a>
-                <a class="skills" href="{{ path('app_skills') }}">
+                <a class="skillss" href="{{ path('app_skills') }}">
                     <h2>Compétences</h2>
                 </a>
             </div>

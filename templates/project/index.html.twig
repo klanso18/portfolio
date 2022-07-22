@@ -4,7 +4,13 @@
 <div class="d-flex flex-column">
     {% include "_navbar.html.twig" %}
 </div>
-<section class="myprojects">
+<div class="container">
+{# <div class="project">
+    <h1 class="text-center pb-3">Mes projets</h1>
+</div>
+<hr> #}
+</div>
+<section class="myprojects pt-3">
     <section class="swiper mySwiper mb-5 mx-5">
         <div class="swiper-wrapper">
             {% for project in projects %}
@@ -12,6 +18,9 @@
                     {% if image.isMain %}
                         <div class="swiper-slide d-flex flex-column position-relative">
                             <img class="img-fluid" src="{{ asset('build/images/' ~ image.name)}}">
+                            <a class="stretched-link" href="{{ path('project_show', { 'id': project.id }) }}">
+                            {{ project.name }}
+                        </a>
                         </div>
                     {% endif %}
                 {% endfor %}
@@ -42,21 +51,17 @@
     prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-    320: {
+    0: {
     slidesPerView: 1,
     spaceBetween: 20
     },
-    480: {
+    830: {
     slidesPerView: 2,
     spaceBetween: 20
     },
-    768: {
+    1240: {
     slidesPerView: 3,
     spaceBetween: 40
-    },
-    1024: {
-    slidesPerView: 4,
-    spaceBetween: 50
     },
     }
     });
