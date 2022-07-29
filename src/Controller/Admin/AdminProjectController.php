@@ -5,10 +5,12 @@ namespace App\Controller\Admin;
 use App\Entity\Image;
 use App\Entity\Project;
 use App\Form\ProjectType;
+use App\Repository\ImageRepository;
 use App\Repository\ProjectRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 #[Route('/admin/project')]
@@ -26,9 +28,7 @@ class AdminProjectController extends AbstractController
     public function new(Request $request, ProjectRepository $projectRepository): Response
     {
         $project = new Project();
-        $image = new Image();
         $form = $this->createForm(ProjectType::class, $project);
-        $project->addImage($image);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -52,12 +52,23 @@ class AdminProjectController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'app_admin_project_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Project $project, ProjectRepository $projectRepository): Response
+    public function edit(Request $request, Project $project, ProjectRepository $projectRepository, ImageRepository $imageRepository): Response
     {
         $form = $this->createForm(ProjectType::class, $project);
+        $originalImages = new ArrayCollection();
+
+        // Create an ArrayCollection of the current Image objects in the database
+        foreach ($project->getImages() as $image) {
+            $originalImages->add($image);
+        }
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            foreach ($originalImages as $image) {
+                if (false == $project->getImages()->contains($image)) {
+                    $imageRepository->remove($image, true);
+                }
+            }
             $projectRepository->add($project, true);
 
             return $this->redirectToRoute('app_admin_project_index', [], Response::HTTP_SEE_OTHER);

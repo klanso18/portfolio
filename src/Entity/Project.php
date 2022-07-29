@@ -7,7 +7,6 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
 
 #[ORM\Entity(repositoryClass: ProjectRepository::class)]
@@ -30,11 +29,8 @@ class Project
     #[ORM\ManyToMany(targetEntity: Stack::class, mappedBy: 'projects')]
     private Collection $stacks;
 
-    #[ORM\OneToMany(mappedBy: 'project', targetEntity: Image::class)]
+    #[ORM\OneToMany(mappedBy: 'project', targetEntity: Image::class, cascade: ['persist', 'remove'])]
     private Collection $images;
-
-    #[Vich\UploadableField(mapping: 'poster_file', fileNameProperty: 'poster')]
-    private File $posterFile;
 
     public function __construct()
     {

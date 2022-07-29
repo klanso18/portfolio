@@ -10,6 +10,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 
 class ProjectType extends AbstractType
 {
@@ -35,14 +36,13 @@ class ProjectType extends AbstractType
                 'multiple' => true,
                 'expanded' => true,
                 'by_reference' => false,
+            ])
+            ->add('images', CollectionType::class, [
+                'entry_type' => ImageProjectType::class,
+                'allow_add' => true,
+                'allow_delete' => true,
+                'by_reference' => false
             ]);
-            // ->add('images', CollectionType::class, [
-            //     'label' => false,
-            //     'entry_type' => ImageProjectType::class,
-            //     'by_reference' => false,
-            //     'allow_add' => true,
-            //     'allow_delete' => true,
-            // ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

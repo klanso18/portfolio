@@ -14,7 +14,6 @@ class ImageProjectType extends AbstractType
         $builder
             ->add('name')
             ->add('isMain')
-            ->add('project')
         ;
     }
 

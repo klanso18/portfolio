@@ -1,4 +1,68 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    {{ form_row(form.name) }}
+    {{ form_row(form.description) }}
+    {{ form_row(form.createdAt) }}
+    {{ form_row(form.stacks) }}
+
+    <div class="p-3 bg-primary bg-opacity-10 border border-2">
+    <h3>Images</h3>
+    <ul class="images list-group mb-2"
+    data-index="{{ form.images|length > 0 ? form.images|last.vars.name + 1 : 0 }}"
+    data-prototype="{{ form_widget(form.images.vars.prototype)|e('html_attr') }}">
+    {% for image in form.images %}
+            <li class="list-group-item">
+                {{ form_row(image.name )}}
+                {{ form_row(image.isMain )}}
+            </li>
+    {% endfor %}
+    </ul>
+    <button type="button" class="add_item_link btn btn-success" data-collection-holder-class="images">Add an image</button>
+    <hr>
+    <button class="btn btn-success">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
+
+<script>
+    const addFormToCollection = (e) => {
+        const collectionHolder = document.querySelector('.' + e.currentTarget.dataset.collectionHolderClass);
+
+        const item = document.createElement('li');
+
+        item.innerHTML = collectionHolder
+            .dataset
+            .prototype
+            .replace(
+            /__name__/g,
+            collectionHolder.dataset.index
+            );
+        addTagFormDeleteLink(item);
+        collectionHolder.appendChild(item);
+
+        collectionHolder.dataset.index++;
+    };
+
+    const addTagFormDeleteLink = (item) => {
+        const removeFormButton = document.createElement('button');
+        removeFormButton.setAttribute('class', 'btn btn-sm btn-danger')
+        removeFormButton.innerText = 'Effacer cette image';
+
+        item.append(removeFormButton);
+
+        removeFormButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            // remove the li for the tag form
+            item.remove();
+        });
+    }
+
+    document
+    .querySelectorAll('.add_item_link')
+    .forEach(btn => {
+        btn.addEventListener("click", addFormToCollection)
+    });
+
+    document
+    .querySelectorAll('ul.images li')
+    .forEach((image) => {
+        addTagFormDeleteLink(image)
+    })
+</script>
