@@ -4,24 +4,26 @@
 <div class="d-flex flex-column">
     {% include "_navbar.html.twig" %}
 </div>
-<div class="about">
-    <div class="picture">
-        <img class="img-fluid" src="{{ asset('build/images/avatar.png')}}">
+<body class="d-flex flex-column justify-content-center">
+    <div class="about">
+        <div class="picture">
+            <img class="img-fluid" src="{{ asset('build/images/avatar.png')}}">
+        </div>
+        <div class="text">
+            <p class="text-justify">Kévin ! 35 ans, passionné de sport.. et de code !<br>
+            Appliqué, patient et soucieux du détail, j'ai mené l'ensemble de mes projets retail et marketing produit, avec rigueur et détermination, en privilégiant systématiquement l'expérience et la satisfaction de l'utilisateur.
+            Ma passion pour le développement web rythme mon quotidien.<br>
+            Afin de poursuivre cette quête infiniment passionnante, je recherche une entreprise pour un stage de 6 mois à partir du 1er Août ou un contrat de professionnalisation d'un an qui débutera au mois de septembre.<br>
+            <br>
+            🔍 A la recherche d'un stage ou d'une alternance en contrat de professionnalisation.<br>
+            🚀 Décollage prévu en août pour le stage (jusqu'à 6 mois) ou en septembre pour l'alternance (12 mois).<br>
+            🔄 Rythme alternance: 3 semaines en entreprise / 1 semaine en formation.<br>
+            🌍 Zone de recherche : Bordeaux et ses environs.<br>
+            🔧 Stack enseignée durant l'alternance : React - NodeJS - React Native - Flutter - Typescript - Docker</p>
+        </div>
     </div>
-    <div class="text">
-        <p class="text-justify">Kévin ! 35 ans, passionné de sport.. et de code !<br>
-        Appliqué, patient et soucieux du détail, j'ai mené l'ensemble de mes projets retail et marketing produit, avec rigueur et détermination, en privilégiant systématiquement l'expérience et la satisfaction de l'utilisateur.
-        Ma passion pour le développement web rythme mon quotidien.<br>
-        Afin de poursuivre cette quête infiniment passionnante, je recherche une entreprise pour un stage de 6 mois à partir du 1er Août ou un contrat de professionnalisation d'un an qui débutera au mois de septembre.<br>
-        <br>
-        🔍 A la recherche d'un stage ou d'une alternance en contrat de professionnalisation.<br>
-        🚀 Décollage prévu en août pour le stage (jusqu'à 6 mois) ou en septembre pour l'alternance (12 mois).<br>
-        🔄 Rythme alternance: 3 semaines en entreprise / 1 semaine en formation.<br>
-        🌍 Zone de recherche : Bordeaux et ses environs.<br>
-        🔧 Stack enseignée durant l'alternance : React - NodeJS - React Native - Flutter - Typescript - Docker</p>
+    <div class="d-flex flex-column">
+        {% include "_homebtn.html.twig" %}
     </div>
-</div>
-<div class="d-flex flex-column">
-    {% include "_homebtn.html.twig" %}
-</div>
+</body>
 {% endblock %}
