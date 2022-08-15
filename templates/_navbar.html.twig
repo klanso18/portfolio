@@ -1,20 +1,39 @@
-{# <nav class="navbar navbar-expand-lg bg-light fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-nav">
-        <a class="nav-link" href="{{ path('app_home') }}">Home</a>
-        <a class="nav-link" href="{{ path('app_about') }}">A propos</a>
-        <a class="nav-link" href="{{ path('project_index') }}">Project</a>
-        <a class="nav-link" href="#">Compétences</a>
-        <a class="nav-link" href="#">Contact</a>
-      </div>
-    </div>
-</nav> #}
-
-<nav class="navbar fixed-top">
-  <div class="container-fluid">
-    <a class="nav-link-1" href="{{ path('app_about') }}">A propos</a>
-    <a class="nav-link-2" href="{{ path('project_index') }}">Projets</a>
-    <a class="nav-link-3" href="{{ path('app_skills') }}">Compétences</a>
-    <a class="nav-link-4" href="{{ path('app_contact') }}">Contact</a>
-  </div>
+<div class="nav">
+<nav class="menu">
+  <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+  <label class="menu-open-button" for="menu-open">
+    <span class="hamburger hamburger-1"></span>
+    <span class="hamburger hamburger-2"></span>
+    <span class="hamburger hamburger-3"></span>
+  </label>
+  
+  <a href="{{ path('app_about') }}" class="menu-item"> <i class="fa-solid fa-user"></i> </a>
+  <a href="{{ path('project_index') }}" class="menu-item"> <i class="fa-solid fa-globe"></i></a>
+  <a href="{{ path('app_skills') }}" class="menu-item"> <i class="fa-solid fa-gear"></i> </a>
+  <a href="{{ path('app_contact') }}" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+  
+  
 </nav>
+</div>
+
+
+<!-- filters -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="shadowed-goo">
+          
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+          <feComposite in2="shadow" in="goo" result="goo" />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+      </filter>
+      <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+      </filter>
+    </defs>
+</svg>
