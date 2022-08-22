@@ -17,13 +17,19 @@
     to {transform:scale(0)}
 }
 
+.myproject > h1 {
+    color: $secondary;
+    font-family: $monospace;
+    font-size: 2rem;
+}
+
 .project > h1 {
     color: $secondary;
     font-family: $sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
-.project > p {
+.myproject > p {
     color: $secondary;
     font-family: $sans-serif;
     font-size: 1.2rem;
@@ -41,10 +47,12 @@
     justify-content: center;
     margin: 10px;
     width: 5rem;
-    background: $secondary;
+    background: $gray;
     height: 5rem;
     text-align: center;
     border-radius: 100px;
+    color: $primary;
+    font-family: $sans-serif;
 }
 
 .stack {

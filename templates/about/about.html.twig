@@ -6,24 +6,132 @@
     <div class="mt-2">
         {% include "_navbar.html.twig" %}
     </div>
-    <div class="about">
-        <div class="picture">
-            <img class="img-fluid" src="{{ asset('build/images/avatar.png')}}">
+    <div class="container-fluid">
+        <div class="about">
+            <div class="picture justify-content-center">
+                <img class="img-fluid" src="{{ asset('build/images/kl.jpg')}}">
+            </div>
+            <div class="content">
+                <h1>Qui-suis-je ?</h1>
+                <hr>
+                <p class="text-justify">Je suis Kévin, j'ai 35 ans, originaire de Bayonne et domicilié sur le Bassin d'Arcachon.<br>
+                Appliqué, patient et soucieux du détail, j'ai mené l'ensemble de mes projets web, retail et marketing avec rigueur et détermination, en privilégiant systématiquement l'expérience et la satisfaction de l'utilisateur.<br>
+                Après plusieurs années d'expérience dans le commerce et le marketing, j'ai souhaité me reconvertir dans la création et la conception de sites web. <br>
+                Une formation certifiante ainsi qu'une grande volonté m'ont permis d'acquérir rapidement les connaissances techniques requises.<br>
+                Je suis à présent à la <strong>recherche d'un stage en tant que développeur back-end PHP</strong> pour une durée pouvant varier entre 3 et 6 mois.
+                L'objectif de ce stage est de mettre en application mes acquis en participant au développement d'un ou plusieurs projets, aussi bien sur la partie front-end que back-end.
+                Concernant mes attentes, j'aimerais avant tout rejoindre une équipe passionnée avec laquelle je pourrai continuer d'apprendre et d'évoluer.<br></p>
+            </div>
         </div>
-        <div class="text">
-            <p class="text-justify">Kévin ! 35 ans, passionné de sport.. et de code !<br>
-            Appliqué, patient et soucieux du détail, j'ai mené l'ensemble de mes projets retail et marketing produit, avec rigueur et détermination, en privilégiant systématiquement l'expérience et la satisfaction de l'utilisateur.
-            Ma passion pour le développement web rythme mon quotidien.<br>
-            Afin de poursuivre cette quête infiniment passionnante, je recherche une entreprise pour un stage de 6 mois à partir du 1er Août ou un contrat de professionnalisation d'un an qui débutera au mois de septembre.<br>
-            <br>
-            🔍 A la recherche d'un stage ou d'une alternance en contrat de professionnalisation.<br>
-            🚀 Décollage prévu en août pour le stage (jusqu'à 6 mois) ou en septembre pour l'alternance (12 mois).<br>
-            🔄 Rythme alternance: 3 semaines en entreprise / 1 semaine en formation.<br>
-            🌍 Zone de recherche : Bordeaux et ses environs.<br>
-            🔧 Stack enseignée durant l'alternance : React - NodeJS - React Native - Flutter - Typescript - Docker</p>
+        <div class="content">
+            <div class="myskills">
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/creatif.png')}}">
+                    <p class="descrip pt-2">Créativité</p>
+                </div>
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/curieux.png')}}">
+                    <p class="descrip pt-2">Curiosité</p>
+                </div>
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/temps.png')}}">
+                    <p class="descrip pt-2">Gestion du temps</p>
+                </div>
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/organisation.png')}}">
+                    <p class="descrip pt-2">Organisation</p>
+                </div>
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/equipe.png')}}">
+                    <p class="descrip pt-2">Travail en équipe</p>
+                </div>
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/problem.png')}}">
+                    <p class="descrip pt-2">Résolution de problème</p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="mt-auto mb-5">
+        {# <hr>
+        <div class="content">
+            <h1>Hard skills</h1>
+            <div class="mytools">
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/php.png')}}">
+                    <p class="descrip pt-2">PHP</p>
+                </div>
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/symfony.png')}}">
+                    <p class="descrip pt-2">Symfony</p>
+                </div>
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/JS.png')}}">
+                    <p class="descrip pt-2">JavaScript</p>
+                </div>
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/html.png')}}">
+                    <p class="descrip pt-2">HTML</p>
+                </div>
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/css.png')}}">
+                    <p class="descrip pt-2">CSS</p>
+                </div>
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/bootstrap.png')}}">
+                    <p class="descrip pt-2">Bootstrap</p>
+                </div>
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/twig.png')}}">
+                    <p class="descrip pt-2">Twig</p>
+                </div>
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/mysql.png')}}">
+                    <p class="descrip pt-2">MySQL</p>
+                </div>
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/git.png')}}">
+                    <p class="descrip pt-2">Git</p>
+                </div>
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/github.png')}}">
+                    <p class="descrip pt-2">Github</p>
+                </div>
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/figma.png')}}">
+                    <p class="descrip pt-2">Figma</p>
+                </div>
+                <div class="myskill animate__bounceIn">
+                    <img class="img" src="{{ asset('build/images/trello.png')}}">
+                    <p class="descrip pt-2">Trello</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about2">
+        <div class="content">
+            <h1>Qu'ai-je fait ?</h1>
+            <div class="background">
+                <div class="formations p-3">
+                        <ul>
+                            <li>Titre Développeur Web | Wild Code School Remote</li>
+                            <li>Masters of Science Marketing | INSEEC Bordeaux</li>
+                            <li>Licence pro Adjoint de direction PME-PMI | UPPA Bayonne</li>
+                            <li>BTS Management des unités commerciales | EPSECO Bayonne</li>
+                        </ul>
+                </div>
+                <div class="experiences p-3">
+                        <ul>
+                            <li>Responsable de rayon | Decathlon</li>
+                            <li>Merchandiser junior | Tribord</li>
+                            <li>Assistant chef de produit | Quiksilver</li>
+                            <li>Assistant Ressources Humaines | Safran Helicopter Engines</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="zoom-in-out-box"></div> #}
+    <div class="mt-auto mb-5 pt-5">
         {% include "_homebtn.html.twig" %}
     </div>
 </body>

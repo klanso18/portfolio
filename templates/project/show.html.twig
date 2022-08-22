@@ -6,17 +6,17 @@
  </div>
 <section class="mt-2">
     <div class="container">
-        <div class="project">
+        <div class="myproject">
             <h1 class="text-center mb-4">{{ project.name }}</h1>
-            <p class="text-center mb-4">{{ project.createdAt|date('d-m-Y') }}</p>
+            <p class="text-center mb-4">{{ project.createdAt|date('m-Y') }}</p>
             <p class="text-center mb-4">{{ project.description }}</p>
         </div>
     </div>
     <hr>
     <div class="container">
-        <div class="stackh2">
+        {# <div class="stackh2">
             <h2 class="text-center mb-4 pt-2">Stacks</h2>
-        </div>
+        </div> #}
         <div class="stack">
             {% for stack in project.stacks %}
                 <div class="circle">
@@ -39,8 +39,6 @@
             </div>
         </div>
     </section>
-
-
 <div class="mt-auto mb-5">
     {% include "_homebtn.html.twig" %}
 </div>

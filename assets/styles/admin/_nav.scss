@@ -30,3 +30,11 @@ img {
 .sidebar {
   color: $secondary;
 }
+
+.log {
+  display: flex;
+  flex-direction: column;
+  color: $secondary;
+  align-items: center;
+}
+

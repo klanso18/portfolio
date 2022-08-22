@@ -1,35 +1,32 @@
 <nav class="main-nav" style="width: 280px;">
-    <a href="{{ path('app_home') }}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-    <h1>Portfolio</h1>
-    </a>
-    <hr class="sidebar">
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="{{ path('app_admin_project_index') }}" class="nav-link text-white" aria-current="page">
-          Mes projets
-        </a>
-      </li>
-      <li>
-        <a href="{{ path('app_admin_image_index') }}" class="nav-link text-white">
-          Mes images
-        </a>
-      </li>
-      <li>
-        <a href="{{ path('app_admin_stack_index') }}" class="nav-link text-white">
-        Ma stack
-        </a>
-      </li>
-    </ul>
-    <hr>
-    <div class="dropdown">
-      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-        <strong>{{ app.user.email }}</strong>
+  <a href="{{ path('app_home') }}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+  <h1>Portfolio</h1>
+  </a>
+  <hr class="sidebar">
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+      <a href="{{ path('app_admin_project_index') }}" class="nav-link text-white" aria-current="page">
+        Mes projets
       </a>
-      <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-        <li>
-          <a class="dropdown-item" href="{{ path('app_logout') }}">Se déconnecter</a>
-        </li>
-      </ul>
+    </li>
+    <li>
+      <a href="{{ path('app_admin_image_index') }}" class="nav-link text-white">
+        Mes images
+      </a>
+    </li>
+    <li>
+      <a href="{{ path('app_admin_stack_index') }}" class="nav-link text-white">
+      Ma stack
+      </a>
+    </li>
+  </ul>
+  <hr>
+  <div class="log">
+    <div class="connected mb-3">
+      <strong>{{ app.user.email }}</strong>
+    </div>
+    <div class="logout">
+      <a class="btn btn-outline-secondary btn-sm" href="{{ path('app_logout') }}">Se déconnecter</a>
     </div>
   </div>
 </nav>
