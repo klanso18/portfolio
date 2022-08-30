@@ -130,3 +130,46 @@ $hamburger-spacing:8px;
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+
+  %ball{
+    width:70px;
+    height:70px;
+    margin-left:-60px;
+    line-height:70px;
+  }
+
+  .menu{
+    width:365px;
+    height: 115px;
+  }
+
+  .menu-open:checked ~ .menu-item:nth-child(3) {
+    transition-duration: 190ms;
+    transform: translate3d(62px, 0, 0);
+  }
+
+  .menu-open:checked ~ .menu-item:nth-child(4) {
+    transition-duration: 290ms;
+    transform: translate3d(130px, 0, 0);
+  }
+
+  .menu-open:checked ~ .menu-item:nth-child(5) {
+    transition-duration: 390ms;
+    transform: translate3d(196px, 0, 0);
+  }
+
+  .menu-open:checked ~ .menu-item:nth-child(6) {
+    transition-duration: 490ms;
+    transform: translate3d(262px, 0, 0);
+  }
+
+  .menu-open-button:hover,
+  .menu-item:hover {
+    background: #468189;
+    border-radius: 100%;
+    color: white;
+}
+
+}

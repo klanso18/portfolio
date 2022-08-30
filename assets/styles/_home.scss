@@ -127,3 +127,24 @@
         grid-template-rows: 1fr 1fr 1fr;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .me > h1 {
+        font-size: 2.8rem;
+    }
+
+    .me > h2 {
+        font-size: 1.5rem;
+    }
+
+    .me > h3 {
+        font-size: 1rem;
+    }
+
+    .aboutme > h2,
+    .projects > h2,
+    .skillss > h2,
+    .contact > h2 {
+    font-size: 1.5rem;
+    }
+}
