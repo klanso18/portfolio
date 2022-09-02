@@ -1,3 +1,12 @@
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
 @-webkit-keyframes zoom {
     from {-webkit-transform:scale(1)}
     to {-webkit-transform:scale(2)}
@@ -31,7 +40,7 @@
 
 .myproject > p {
     color: $secondary;
-    font-family: $sans-serif;
+    font-family: $font-family;
     font-size: 1.2rem;
 }
 
@@ -126,6 +135,41 @@
     animation-duration: 0.6s;
 }
 
+#close {
+	overflow: hidden;
+	position: relative;
+	border: none;
+	padding: 0;
+	width: 2em; height: 2em;
+	border-radius: 50%;
+	background: transparent;
+	color: #f2441d;
+	font: inherit;
+	text-indent: 100%;
+	cursor: pointer;
+    left: 100%;
+	
+	&:focus {
+		outline: solid 0 transparent;
+	}
+	
+	&:hover {
+		background: $gray;
+	}
+	
+	&:before, &:after {
+		position: absolute;
+		top: 15%; left: calc(50% - .0625em);
+		width: .125em; height: 70%;
+		border-radius: .125em;
+		transform: rotate(45deg);
+		background: currentcolor;
+		content: ''
+	}
+	
+	&:after { transform: rotate(-45deg); }
+}
+
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
     .modal-content {
@@ -142,3 +186,4 @@
         display: none;
     }
 }
+

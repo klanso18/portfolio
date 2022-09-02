@@ -131,6 +131,29 @@ $hamburger-spacing:8px;
   }
 }
 
+@media screen and (min-width: 601px) {
+  .menu-item:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 80px;
+    color: $secondary;
+    font-family: $sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 85%;
+  }
+
+  .menu-item:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 @media screen and (max-width: 600px) {
 
   %ball{

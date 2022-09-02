@@ -1,3 +1,20 @@
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
+.mycontact {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 .mycontact > h1 {
   color: $secondary;
   font-family: $sans-serif;
@@ -102,6 +119,12 @@
 @media screen and (max-width: 700px) {
    .wrapper {
     flex-direction: column;
-    padding-top: 3rem;
    }
+}
+
+@media screen and (max-width: 600px) {
+  .mycontact {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

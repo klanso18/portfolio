@@ -39,7 +39,7 @@ strong {
     font-size: 2rem;
 }
 
-.container > p {
+.content > p {
     font-family: $font-family;
     color: $gray;
     padding: 1rem;
@@ -135,7 +135,8 @@ li {
     // }
 
     .about {
-        padding: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .myskills {
