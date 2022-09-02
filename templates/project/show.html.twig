@@ -11,7 +11,18 @@
             <p class="text-center mb-4">{{ project.createdAt|date('m-Y') }}</p>
             <h1 class="text-center mb-2">{{ project.name }}</h1>
             <p class="text-center mb-4">{{ project.description }}</p>
-            <p class="text-center mb-4 fst-italic">En cours de déploiement...</p>
+            {% if project.id == 9 %}
+                <p class="text-center mb-2"><a href="https://evote.remote-fr-1.wilders.dev/" class="link">Par ici</a></p>
+            {% endif %}
+            {% if project.id == 10 %}
+                <p class="text-center mb-4 fst-italic">En cours de déploiement...</p>
+            {% endif %}
+            {% if project.id == 11 %}
+                <p class="text-center mb-4 fst-italic">En cours de déploiement...</p>
+            {% endif %}
+            {% if project.id == 12 %}
+                <p class="text-center mb-2"><a href="https://alexandreguyonnetwcs.github.io/phpProjetCv/" class="link">Par ici</a></p>
+            {% endif %}
         </div>
     </div>
     <hr>
