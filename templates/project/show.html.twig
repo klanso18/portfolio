@@ -11,16 +11,16 @@
             <p class="text-center mb-4">{{ project.createdAt|date('m-Y') }}</p>
             <h1 class="text-center mb-2">{{ project.name }}</h1>
             <p class="text-center mb-4">{{ project.description }}</p>
-            {% if project.id == 1 %}
+            {% if project.name == "Evote" %}
                 <p class="text-center mb-2"><a href="https://evote.remote-fr-1.wilders.dev/" class="link">Par ici</a></p>
             {% endif %}
-            {% if project.id == 2 %}
+            {% if project.name == "Potes'agers" %}
                 <p class="text-center mb-4 fst-italic">En cours de déploiement...</p>
             {% endif %}
-            {% if project.id == 3 %}
+            {% if project.name == "Serial Series" %}
                 <p class="text-center mb-4 fst-italic">En cours de déploiement...</p>
             {% endif %}
-            {% if project.id == 4 %}
+            {% if project.name == "CV de Darth Vader" %}
                 <p class="text-center mb-2"><a href="https://alexandreguyonnetwcs.github.io/phpProjetCv/" class="link">Par ici</a></p>
             {% endif %}
         </div>
