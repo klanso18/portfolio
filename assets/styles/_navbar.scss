@@ -166,6 +166,8 @@ $hamburger-spacing:8px;
   .menu{
     width:365px;
     height: 115px;
+    position: fixed;
+    z-index: 100;
   }
 
   .menu-open:checked ~ .menu-item:nth-child(3) {
