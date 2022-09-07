@@ -7,6 +7,17 @@
      }
 }
 
+@keyframes lineH {
+    0%{
+        width: 0%;
+        opacity: 0;
+    }
+    100%{
+        width: 72%;
+        opacity: 100%;
+    }
+}
+
 .homepage {
     display: grid;
     grid-template-columns: 4fr 0.2fr 1fr;
@@ -138,6 +149,29 @@
     filter: brightness(110%);
 }
 
+.line {
+    position: absolute;
+	left: 5rem;
+	top: 49.8%;
+	height: 5px;
+	background: $blue;
+	animation: lineH 5s 0.5s forwards;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1645px) {
+    @keyframes lineH {
+        0%{
+            width: 0%;
+            opacity: 0;
+        }
+        100%{
+            width: 67%;
+            opacity: 100%;
+        }
+    }
+}
+
 @media screen and (max-width: 992px) {
     .homepage {
         grid-template-columns: 1fr;
@@ -162,6 +196,10 @@
 
     .contact {
         border-bottom-left-radius: inherit;
+    }
+
+    .line {
+        display: none;
     }
 }
 
