@@ -10,22 +10,22 @@
         <div class="myproject">
             <p class="text-center mb-4">{{ project.createdAt|date('m-Y') }}</p>
             <h1 class="text-center mb-2">{{ project.name }}</h1>
+            <hr>
             <p class="text-center mb-4">{{ project.description|nl2br }}</p>
             {% if project.name == "Evote" %}
-                <p class="text-center mb-2"><a href="https://evote.remote-fr-1.wilders.dev/" class="link">Par ici</a></p>
+                <p class="text-center mb-2"><a href="https://evote.remote-fr-1.wilders.dev/" class="link">Accéder au site</a></p>
             {% endif %}
             {% if project.name == "Potes'agers" %}
                 <p class="text-center mb-4 fst-italic">En cours de déploiement...</p>
             {% endif %}
             {% if project.name == "Serial Series" %}
-                <p class="text-center mb-2"><a href="http://serial-series.klansot.com/" class="link">Par ici</a></p>
+                <p class="text-center mb-2"><a href="http://serial-series.klansot.com/" class="link">Accéder au site</a></p>
             {% endif %}
             {% if project.name == "CV de Darth Vader" %}
-                <p class="text-center mb-2"><a href="https://alexandreguyonnetwcs.github.io/phpProjetCv/" class="link">Par ici</a></p>
+                <p class="text-center mb-2"><a href="https://alexandreguyonnetwcs.github.io/phpProjetCv/" class="link">Accéder au site</a></p>
             {% endif %}
         </div>
     </div>
-    <hr>
     <div class="container">
         {# <div class="stackh2">
             <h2 class="text-center mb-4 pt-2">Stacks</h2>

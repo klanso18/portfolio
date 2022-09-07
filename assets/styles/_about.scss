@@ -23,13 +23,15 @@
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    // padding-left: 5rem;
+    // padding-right: 5rem;
+    padding: 0px 150px;
 }
 
 strong {
     font-size: 1.5rem;
     color: $secondary;
+    font-weight: 100;
 }
 
 .about > h1 {
