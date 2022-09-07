@@ -9,7 +9,7 @@
 
 .homepage {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 4fr 0.2fr 1fr;
     height: auto !important;
     height: 100%;
     min-height: 100%;
@@ -22,7 +22,8 @@
     background-color: $primary;
     text-align: start;
     height: 100%;
-    padding: 5rem;
+    padding-top: 3rem;
+    padding-left: 5rem;
 }
 
 .me > h1 {
@@ -51,15 +52,37 @@
     animation-fill-mode: forwards;
 }
 
+.address {
+    background-color: $primary;
+    color: $blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homelink > a {
+    color: $blue;
+}
+
+.homelink:hover {
+    background-color: $secondary;
+    border-radius: 10px;
+}
+
 .pages {
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     height: auto !important;
     height: 100%;
     min-height: 100%;
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    // animation: fadeInAnimation ease 3s;
+    // animation-iteration-count: 1;
+    // animation-fill-mode: forwards;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    background: $primary;
+
 }
 
 .middle {
@@ -82,6 +105,7 @@
 
 .aboutme {
     background-color: $blue;
+    border-top-left-radius: 60px 60px;
 }
 
 .projects {
@@ -94,6 +118,7 @@
 
 .contact {
     background-color: $cyan;
+    border-bottom-left-radius: 60px 60px;
 }
 
 .aboutme > h2,
@@ -103,8 +128,7 @@
     transition:transform .4s;
     font-size: 2rem;
     color: $secondary;
-    font-family: $monospace;
-    text-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+    font-family: $sans-serif;
 }
 
 .aboutme:hover,
@@ -119,18 +143,35 @@
         grid-template-columns: 1fr;
     }
 
+    .whoami {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .address {
+        flex-direction: row;
+    }
+
     .pages {
         grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .aboutme {
+        border-top-left-radius: inherit;
+    }
+
+    .contact {
+        border-bottom-left-radius: inherit;
     }
 }
 
 @media screen and (max-width: 600px) {
     .me > h1 {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
 
     .me > h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .me > h3 {
