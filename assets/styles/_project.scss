@@ -183,6 +183,14 @@
     .screen-shot {
         grid-template-columns: 1fr 1fr;
     }
+
+    .link {
+        border-bottom: 1px solid $gray;
+        border-top: 1px solid $gray;
+        padding-bottom: 2px;
+        color: $secondary;
+        font-style: normal;
+    }
 }
 
 @media screen and (max-width: 1023px) {
